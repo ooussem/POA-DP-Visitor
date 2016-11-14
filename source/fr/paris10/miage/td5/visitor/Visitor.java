@@ -12,7 +12,7 @@ public interface Visitor {
     public void visit(Bureau bureau);
     public void visit(GardeRobe gardeRobe);
     public void visit(Lit lit);
-
-
+    public void visit(Lamp lamp);
+    public void visit(CollectionDeLivre collectionLivre);
 
 }

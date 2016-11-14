@@ -10,10 +10,6 @@ public class VisitorSuffixe implements Visitor {
     @Override
     public void visit(Univers univ) {
         System.out.println("Je suis un " + univ.getNameUnivers());
-        for(ObjetBasique obj : univ.getCompositeList()){
-            obj.
-        }
-
     }
 
     @Override
@@ -33,6 +29,16 @@ public class VisitorSuffixe implements Visitor {
 
     @Override
     public void visit(Lit lit) {
+
+    }
+
+    @Override
+    public void visit(Lamp lamp) {
+
+    }
+
+    @Override
+    public void visit(CollectionDeLivre collectionLivre) {
 
     }
 }

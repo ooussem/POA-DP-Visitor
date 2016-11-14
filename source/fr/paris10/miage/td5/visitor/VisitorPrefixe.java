@@ -30,4 +30,14 @@ public class VisitorPrefixe implements Visitor {
     public void visit(Lit lit) {
 
     }
+
+    @Override
+    public void visit(Lamp lamp) {
+
+    }
+
+    @Override
+    public void visit(CollectionDeLivre collectionLivre) {
+
+    }
 }
