@@ -24,6 +24,6 @@ public class CollectionDeLivre extends Objet {
 
     @Override
     public void accept(Visitor visitor) {
-        super.accept(visitor);
+        visitor.visit(this);
     }
 }
