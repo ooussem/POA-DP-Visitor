@@ -24,7 +24,7 @@ public class VisitorCount implements Visitor {
     public void visit(Appartement appartement) {
         System.out.println("Je suis un appartement numero " +appartement.getNumero());
         appartement.getListPiece().forEach(piece -> piece.accept(this));
-        System.out.println("La somme total de l'appartement " +appartement.getNumero()+ " est de " +somme);
+        System.out.println("La somme total de l'appartement " +appartement.getNumero()+ " est de " +this.somme);
     }
 
     @Override
@@ -51,10 +51,10 @@ public class VisitorCount implements Visitor {
                                         .map(vetement -> vetement.getPrix())
                                         .reduce(0, (x,y)-> x+y);
         System.out.println("Somme des vetements où le prix dépasse "+this.limit+" euros : "
-                +gardeRobe.listVetement.stream()
-                .map(vetement -> vetement.getPrix())
-                .filter(prix -> prix>this.limit )
-                .reduce(0, (x,y)-> x+y));
+                            +gardeRobe.listVetement.stream()
+                                                    .map(vetement -> vetement.getPrix())
+                                                    .filter(prix -> prix>this.limit )
+                                                    .reduce(0, (x,y)-> x+y));
 
         /**
          * Les vetements du stream d'en heut dépassant les 100e auront un deuxième visiteur.
@@ -73,8 +73,8 @@ public class VisitorCount implements Visitor {
         System.out.println("Je suis une collection de livre : " +collectionLivre.getName());
         collectionLivre.listlivre.forEach(livre -> livre.accept(this));
         somme += collectionLivre.listlivre.parallelStream()
-                .map(livre -> livre.getPrix())
-                .reduce(0, (x,y)-> x+y);
+                                            .map(livre -> livre.getPrix())
+                                            .reduce(0, (x,y)-> x+y);
 
     }
 
